@@ -11,7 +11,7 @@
 
 ## Live Demo
 
-> [Click here](https://abelg101-footstrix.netlify.app/)
+> [Click here]()
 
   
 
