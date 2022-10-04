@@ -1,44 +1,61 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
-const DetailsPage = () => (
-  <div className="player-details-container">
-    <Link to="/" className="return-btn"><i className="fa-solid fa-chevron-left" /></Link>
-    <header className="player-details-header">
-      <div className="image">
-        <img src="https://media.api-sports.io/football/players/1100.png" alt="E.Haaland" />
+const DetailsPage = () => {
+  const location = useLocation();
+  console.log(location);
+  const {
+    name, age, nationality, img, clubName, appearences, minsPlayed, goals, assists,
+  } = location.state.state;
+  return (
+    <div className="player-details-container">
+      <Link to="/" className="return-btn"><i className="fa-solid fa-chevron-left" /></Link>
+      <header className="player-details-header">
+        <div className="image">
+          <img src={img} alt={name} />
+        </div>
+        <div className="player-details-info">
+          <h3 className="name">{name}</h3>
+          <h5 className="age">
+            {age}
+            {' '}
+            yrs old
+          </h5>
+          <h5 className="country">{nationality}</h5>
+        </div>
+      </header>
+      <div className="player-details-stats-container">
+        <h3 className="stats-header">Statistics</h3>
+        <table className="stats-table">
+          <tbody>
+            <tr>
+              <td>Club</td>
+              <td>{clubName}</td>
+            </tr>
+            <tr>
+              <td>Apperances</td>
+              <td>{appearences}</td>
+            </tr>
+            <tr>
+              <td>Minutes played</td>
+              <td>
+                {minsPlayed}
+                {' '}
+                mins
+              </td>
+            </tr>
+            <tr>
+              <td>Goals</td>
+              <td>{goals}</td>
+            </tr>
+            <tr>
+              <td>Assists</td>
+              <td>{assists === null ? 0 : assists }</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-      <div className="player-details-info">
-        <h3 className="name">E.Haaland</h3>
-        <h5 className="age">22 yrs old</h5>
-        <h5 className="country">Norway</h5>
-      </div>
-    </header>
-    <div className="player-details-stats-container">
-      <h3 className="stats-header">Statistics</h3>
-      <table className="stats-table">
-        <tr>
-          <td>Team</td>
-          <td>Manchester City</td>
-        </tr>
-        <tr>
-          <td>Apperances</td>
-          <td>8</td>
-        </tr>
-        <tr>
-          <td>Minutes played</td>
-          <td>665 mins</td>
-        </tr>
-        <tr>
-          <td>Goals</td>
-          <td>14</td>
-        </tr>
-        <tr>
-          <td>Assists</td>
-          <td>3</td>
-        </tr>
-      </table>
     </div>
-  </div>
-);
+  );
+};
 
 export default DetailsPage;
