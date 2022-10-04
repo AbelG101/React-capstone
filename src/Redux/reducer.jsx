@@ -1,14 +1,14 @@
 import axios from 'axios';
 
 const GET_TOP_SCORERS = 'GET_TOP_SCORERS';
-const API_URL = 'https://v3.football.api-sports.io/players/topscorers?season=2022&league=39';
 
-const fetchTopScorers = () => (dispatch) => {
+const fetchTopScorers = (season = 2022) => (dispatch) => {
+  const API_URL = `https://v3.football.api-sports.io/players/topscorers?season=${season}&league=39`;
   axios({
     method: 'get',
     headers: {
       'x-rapidapi-host': 'v3.football.api-sports.io',
-      'x-rapidapi-key': 'f447f4c629a0ff04ab548bcf3bbee263',
+      'x-rapidapi-key': '7b85e4216e23400c29a7df8eebb40ca5',
     },
     url: API_URL,
   })
