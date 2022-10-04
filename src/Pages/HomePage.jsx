@@ -9,15 +9,26 @@ const HomePage = () => {
 
   useEffect(() => {
     if (topScorers.length === 0) {
-      dispatch(fetchTopScorers());
+      dispatch(fetchTopScorers(2022));
     }
   });
+
+  const getBySeason = (event) => {
+    if (event.key === 'Enter') {
+      let season = document.querySelector('.search-feild').value;
+      season = season.trim() === '' ? 2022 : season;
+      dispatch(fetchTopScorers(season));
+    }
+  };
 
   return (
     <>
       <header className="header">
         <h1>Premier League  🇬🇧</h1>
         <h2>Top Scorers 🥅</h2>
+        <div className="search-feild-container">
+          <input onKeyDown={getBySeason} placeholder="Enter the season/year, e.g: 2020, 2021" className="search-feild" type="search" />
+        </div>
       </header>
       <main className="home-container">
         {topScorers.map((scorer) => (
