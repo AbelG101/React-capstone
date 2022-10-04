@@ -11,7 +11,7 @@
 
 ## Live Demo
 
-> Comming soon...
+> [Click here](https://abelg101-footstrix.netlify.app/)
 
   
 
