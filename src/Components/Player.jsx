@@ -1,16 +1,34 @@
 import { Link } from 'react-router-dom';
 
-const Player = () => (
-  <Link to="/player-details" className="player">
-    <div className="image"><img src="https://media.api-sports.io/football/players/1100.png" alt="" /></div>
-    <div className="info-container">
-      <div className="info">
-        <h5 className="name font-lato">E.Haaland</h5>
-        <h4 className="goals font-lato">14 goals</h4>
+const Player = (props) => {
+  const {
+    name, age, nationality, img, clubName, appearences, minsPlayed, goals, assists,
+  } = props;
+  const state = {
+    name, age, nationality, img, clubName, appearences, minsPlayed, goals, assists,
+  };
+  return (
+    <Link
+      to="/player-details"
+      state={{
+        state,
+      }}
+      className="player"
+    >
+      <div className="image"><img src={img} alt={name} /></div>
+      <div className="info-container">
+        <div className="info">
+          <h5 className="name font-lato">{name}</h5>
+          <h4 className="goals font-lato">
+            {goals}
+            {' '}
+            goals
+          </h4>
+        </div>
+        <i className="fa-solid fa-circle-arrow-right" />
       </div>
-      <i className="fa-solid fa-circle-arrow-right" />
-    </div>
-  </Link>
-);
+    </Link>
+  );
+};
 
 export default Player;
