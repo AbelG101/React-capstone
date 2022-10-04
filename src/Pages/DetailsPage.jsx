@@ -2,7 +2,6 @@ import { Link, useLocation } from 'react-router-dom';
 
 const DetailsPage = () => {
   const location = useLocation();
-  console.log(location);
   const {
     name, age, nationality, img, clubName, appearences, minsPlayed, goals, assists,
   } = location.state.state;
