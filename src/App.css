@@ -28,6 +28,23 @@ a {
   font-family: 'Lato', sans-serif;
 }
 
+.search-feild-container {
+  width: 100%;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.search-feild {
+  font-family: 'Lato', sans-serif;
+  width: 80%;
+  padding: 8px 10px;
+  border-radius: 20px;
+  border: 2px solid hsl(219, 45%, 18%);
+  outline: none;
+}
+
 .header {
   padding: 15px;
   color: #fff;
