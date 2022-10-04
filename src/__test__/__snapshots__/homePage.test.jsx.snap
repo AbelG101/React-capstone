@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Check if Home is rendering correctly 1`] = `
+Array [
+  <header
+    className="header"
+  >
+    <h1>
+      Premier League  🇬🇧
+    </h1>
+    <h2>
+      Top Scorers 🥅
+    </h2>
+  </header>,
+  <main
+    className="home-container"
+  />,
+]
+`;
+
+exports[`Check the player cards render correctly 1`] = `
+<a
+  className="player"
+  href="/player-details"
+  onClick={[Function]}
+>
+  <div
+    className="image"
+  >
+    <img
+      alt="E. Haaland"
+    />
+  </div>
+  <div
+    className="info-container"
+  >
+    <div
+      className="info"
+    >
+      <h5
+        className="name font-lato"
+      >
+        E. Haaland
+      </h5>
+      <h4
+        className="goals font-lato"
+      >
+        14
+         
+        goals
+      </h4>
+    </div>
+    <i
+      className="fa-solid fa-circle-arrow-right"
+    />
+  </div>
+</a>
+`;
