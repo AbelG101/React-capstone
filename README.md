@@ -6,7 +6,7 @@
 
   
 
-> FootStrix is a single page web application built on the [API-FOOTBALL](https://www.api-football.com/) with only the home and details page that allows the user to checkout the top 10 premier league scorers as well as their detailed statistics.
+> FootStrix is a single-page web application built on the [API-FOOTBALL](https://www.api-football.com/) with only the home and details page that allows the user to check out the top 10 premier league scorers as well as their detailed statistics.
   
 
 ## Live Demo
@@ -44,7 +44,7 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-- use git clone in order to get the copy this repo. You need to have atleast basic understanding of JavaScript.
+- use git clone to get the copy of this repo. You need to have at least a basic understanding of JavaScript.
 
 
 ## Setup
@@ -66,7 +66,7 @@ After installing NodeJS please follow the next steps...
 git clone https://github.com/AbelG101/React-capstone.git
 
 ```
--- for installing dev dependecies use:
+-- for installing dev dependencies use:
 
 ```bash
 
@@ -113,7 +113,7 @@ Feel free to check the [issues page](../../issues/).
 ## Acknowledgments
 - [Microverse](https://github.com/michael-duke/Capstone-I/blob/master/microverse.org)
 
-[Under the the Creative Commons liscense](https://creativecommons.org/licenses/by-nc/4.0/)
+[Under the Creative Commons license](https://creativecommons.org/licenses/by-nc/4.0/)
 Original design from [Nelson Sakwa](https://www.behance.net/sakwadesignstudio) on Behance.
 
 
